@@ -8,7 +8,7 @@ Este projeto consiste em um sistema de monitoramento utilizando os sensores DHT1
 
 - Arduino UNO
 - Sensor DHT11
-- Sensor 10I9
+- Sensor Ultrassonico
 - Computador com Node-RED instalado
 - Acesso à Internet para conexão com MQTT broker e TAGO.IO
 
@@ -17,14 +17,14 @@ Este projeto consiste em um sistema de monitoramento utilizando os sensores DHT1
 ### Hardware
 
 1. Conecte o sensor DHT11 à porta digital do Arduino.
-2. Conecte o sensor 10I9 à outra porta digital do Arduino.
+2. Conecte o sensor Ultrassonico à outra porta digital do Arduino.
 3. Certifique-se de que o Arduino está conectado ao computador via USB.
 
 ### Software
 
 #### Configuração do Arduino
 
-1. Carregue o código padrão para leitura dos sensores DHT11 e 10I9 no Arduino.
+1. Carregue o código padrão para leitura dos sensores DHT11 e Ultrassonico no Arduino.
 2. Certifique-se de que o Arduino esteja configurado para enviar os dados pela porta serial em formato JSON.
 
 #### Configuração do Node-RED
@@ -33,13 +33,13 @@ Este projeto consiste em um sistema de monitoramento utilizando os sensores DHT1
 2. Use os nós de entrada serial para ler os dados do Arduino.
 3. Adicione nós para formatação dos dados em JSON conforme os requerimentos.
 4. Configure os nós MQTT para conectar-se ao seu broker MQTT escolhido.
-5. Defina os tópicos MQTT conforme a estrutura `fiap/iot/Turma/Grupo/Sensor`.
+5. Defina os tópicos MQTT conforme a estrutura `fiap/iot/1ESPS/Compass/DHT`.
 
 #### Configuração do Dashboard
 
 1. Crie uma conta na plataforma TAGO.IO.
 2. Configure um dashboard para visualizar os dados recebidos dos sensores.
-3. Adicione widgets correspondentes a cada tipo de dado recebido (temperatura, umidade, e outros dados do sensor 10I9).
+3. Adicione widgets correspondentes a cada tipo de dado recebido (temperatura, umidade, e outros dados do sensor Ultrassonico).
 
 ## Uso
 
