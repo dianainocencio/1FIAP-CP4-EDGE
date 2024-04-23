@@ -1,0 +1,71 @@
+#include <ArduinoJson.h> // Inclua a biblioteca ArduinoJson
+#include "DHT.h"
+
+#define DHTPIN  7  //define o pino usado no arduino
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE); //declara a objeto da classe
+
+const int TAMANHO = 50;  //define o tamanho do buffer para o json
+
+int cm = 0;
+int triggerPin = 10;
+int echoPin = 9;
+
+long readUltrasonicDistance(int triggerPin, int echoPin)
+{
+  pinMode(triggerPin, OUTPUT);  
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+ 
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);  
+  pinMode(echoPin, INPUT);
+  
+  return pulseIn(echoPin, HIGH);
+}
+
+void setup()
+{
+    //inicialia c sensor
+  dht.begin();
+
+  //inicializa comunicação serial
+  Serial.begin(9600);
+
+}
+
+void loop()
+{  
+    // Faz a leitura da temperatura  
+  float temp = dht.readTemperature();
+  // faz a leitura da humidade
+  float umi = dht.readHumidity();
+
+  cm = 0.01723 * readUltrasonicDistance(triggerPin, echoPin);
+
+  // Criar um objeto JSON
+  StaticJsonDocument<200> doc;
+  doc["distance_cm"] = cm; // Adicionar a variável cm ao JSON
+  doc["temperatura"] = temp;
+
+  // Serializar o objeto JSON para enviar pela porta serial
+  serializeJson(doc, Serial);
+  Serial.println(); // Adicionar uma quebra de linha para separar os dados
+
+  delay(100); 
+
+    StaticJsonDocument<TAMANHO> json; //Aloca buffer para objeto json
+
+
+
+  //formato de escrita do json
+  // json["temperatura"] = temp;
+  // json["umidade"] = umi;
+
+  // serializeJson(json, Serial);
+  // Serial.println();
+
+  //delay
+  delay(3000);
+}
