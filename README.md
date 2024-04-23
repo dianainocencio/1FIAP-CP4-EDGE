@@ -70,6 +70,8 @@ Jorge Henrique Booz
 ## Foto do Sistema Físico
 
 ![image](https://github.com/dianainocencio/cp4-edge/assets/125329245/adb7e0fd-6eb2-484a-ba03-d962de0a2b5a)
-![Uploading image.png…]()
+![image](https://github.com/dianainocencio/cp4-edge/assets/125329245/b2364940-9766-4d26-872d-da3a0f6efa5b)
 
+##MQTT
+![Uploading image.png…]()
 
