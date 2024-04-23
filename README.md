@@ -61,3 +61,8 @@ Caio Hideki
 João Viktor Carvalho de Souza
 
 Jorge Henrique Booz
+
+
+## Dashboard
+
+![image](https://github.com/dianainocencio/cp4-edge/assets/125329245/f4ffae9c-bf02-4c5b-9161-73b45a859e24)
