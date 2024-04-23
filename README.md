@@ -53,7 +53,11 @@ Para contribuir com o projeto, por favor envie suas sugestões e modificações 
 ## Membros
 
 Diana Letícia de Souza Inocencio 
+
 Erick Molina Barreiros
+
 Caio Hideki 
+
 João Viktor Carvalho de Souza
+
 Jorge Henrique Booz
