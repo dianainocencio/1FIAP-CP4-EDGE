@@ -66,3 +66,10 @@ Jorge Henrique Booz
 ## Dashboard
 
 ![image](https://github.com/dianainocencio/cp4-edge/assets/125329245/f4ffae9c-bf02-4c5b-9161-73b45a859e24)
+
+## Foto do Sistema Físico
+
+![image](https://github.com/dianainocencio/cp4-edge/assets/125329245/adb7e0fd-6eb2-484a-ba03-d962de0a2b5a)
+![Uploading image.png…]()
+
+
